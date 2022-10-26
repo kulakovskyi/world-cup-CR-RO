@@ -27,16 +27,14 @@ body
     max-width: 100%
     height: auto
 
+//styles summary
 summary::-webkit-details-marker
   display: none
 summary::marker
   content: none
 
-//styles summary
 [class*="__summary"]
   cursor: pointer
-
-[class*="__summary"]
   font-family: $font-suisse-med
   font-size: 16px
   line-height: 21px
@@ -75,13 +73,16 @@ summary::marker
 .wrapper
   overflow: hidden
   min-height: 100%
+  background: url("../img/ellipse.svg") no-repeat 50% 37%/cover
 
+
+/***********************************HOME SECTION***************************************/
 .home
   display: flex
   justify-content: center
   position: relative
   &__image
-    max-width: 100%
+    margin-left: -1px
   &__title
     display: flex
     flex-direction: column
@@ -132,6 +133,7 @@ summary::marker
       animation: 1.8s infinite mouse-down ease
 
 
+/***********************************PARTICIOATION SECTION***************************************/
 .participation
   &__container
     max-width: 1310px
@@ -182,6 +184,7 @@ summary::marker
       background-color: $green-hover
 
 
+/***********************************FAQ SECTION***************************************/
 .faq
   padding: 110px 0 260px 0
   &__container
@@ -219,6 +222,7 @@ summary::marker
       white-space: nowrap
 
 
+/***********************************TASK SECTION***************************************/
 .task
   padding: 0 0 85px 0
   &__container
@@ -252,8 +256,25 @@ summary::marker
     align-items: center
     position: relative
     margin: 0 0 95px 0
+    &::before
+      content: ''
+      position: absolute
+      top: 20px
+      right: -670px
+      width: 760px
+      height: 392px
+      background: url("../img/task-ticket-blur.png") no-repeat 50% 0%/contain
+    &::after
+      content: ''
+      position: absolute
+      top: 20px
+      left: -670px
+      width: 760px
+      height: 392px
+      background: url("../img/task-ticket-blur.png") no-repeat 50% 0%/contain
+
   &__slider
-    max-width: 825px
+    max-width: 975px
     margin: 0 0 70px 0
     &-item
       width: 825px
@@ -466,7 +487,7 @@ summary::marker
   transition: all .3s ease
 
 
-
+/***********************************PRIZE SECTION***************************************/
 .prize
   padding: 0 0 140px 0
   &__container
@@ -515,6 +536,7 @@ summary::marker
       background: url("../img/arrow.svg") no-repeat 50% 0/contain
 
 
+/***********************************TOURNAMENT SECTION***************************************/
 .tournament
   padding: 70px 0 105px 0
   &__container
@@ -523,6 +545,23 @@ summary::marker
     max-width: 1260px
     display: flex
     flex-direction: column
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      width: 480px
+      height: 750px
+      background: url("../img/Fireworks-left.svg") no-repeat 50% 0%/contain
+      top: -50px
+      left: -240px
+    &::before
+      content: ''
+      position: absolute
+      width: 480px
+      height: 750px
+      background: url("../img/Fireworks-right.svg") no-repeat 50% 0%/contain
+      top: -40px
+      right: -240px
 
   &__title
     font-family: $font-suisse-med
@@ -561,6 +600,8 @@ summary::marker
   background: #0A142C
   border-radius: 25px
   margin: 0 0 55px 0
+  position: relative
+  z-index: 3
   &__head
     display: flex
     align-items: center
@@ -640,6 +681,7 @@ summary::marker
           margin: 0 0 0 15px
 
 
+/***********************************RULES SECTION***************************************/
 .rules
   padding: 0 0 85px 0
   &__container
@@ -660,6 +702,8 @@ summary::marker
       &::-webkit-scrollbar-thumb
         background: $magenta
         border-radius: 100px
+
+
 
 
 

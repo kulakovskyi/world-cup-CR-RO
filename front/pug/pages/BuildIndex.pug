@@ -1,17 +1,18 @@
+section.home
+    picture.home__image
+        source(media="(min-width: 551px) and (orientation: landscape) and (min-height: 500px)" srcset="img/home-photo-desc.jpg")
+        source(media="(min-width: 551px) and (max-width: 1024px) and (orientation: portrait)" srcset="img/home-photo-tab.jpg")
+        source(media="(max-width: 550px) and (orientation: portrait)" srcset="img/home-photo-tab.jpg")
+        source(media="(max-width: 920px) and (orientation: landscape) and (max-height: 450px)" srcset="img/home-photo-tab.jpg")
+        img(src="img/home-photo-desc.jpg" alt="Favbet")
+    h1.home__title
+        .home__title-top Kod kuće kao
+        .home__title-bottom na #[span stadionu]
+    .home__mouse
+        .home__mouse-body
+            .home__mouse-wheel
 .wrapper
-    section.home
-        picture.home__image
-            source(media="(min-width: 551px) and (orientation: landscape) and (min-height: 500px)" srcset="img/home-photo-desc.jpg")
-            source(media="(min-width: 551px) and (max-width: 1024px) and (orientation: portrait)" srcset="img/home-photo-tab.jpg")
-            source(media="(max-width: 550px) and (orientation: portrait)" srcset="img/home-photo-tab.jpg")
-            source(media="(max-width: 920px) and (orientation: landscape) and (max-height: 450px)" srcset="img/home-photo-tab.jpg")
-            img(src="img/home-photo-desc.jpg" alt="Favbet")
-        h1.home__title
-            .home__title-top Kod kuće kao
-            .home__title-bottom na #[span stadionu]
-        .home__mouse
-            .home__mouse-body
-                .home__mouse-wheel
+
     section.participation
         .participation__container
             .participation__row
