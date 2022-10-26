@@ -8,7 +8,7 @@ var slider1 = slider(
     prizesLeftArrow, prizesRightArrow, true);
 
 function slider(id, itemSelector, leftArrow, rightArrow, autoplay, config) {
-    const AUTOPLAY_INTERVAL = 5000;
+    const AUTOPLAY_INTERVAL = 100000000000;
 
     var el = document.getElementById(id);
     el.classList.add('slider')
