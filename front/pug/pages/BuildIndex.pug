@@ -11,8 +11,7 @@ section.home
     .home__mouse
         .home__mouse-body
             .home__mouse-wheel
-.wrapper
-
+.wrapper-main
     section.participation
         .participation__container
             .participation__row
@@ -32,6 +31,8 @@ section.home
                         p.
                             Вболівай вдома , як на стадіоні.
                     a(href="#").participation__button Взяти участь
+                    //Вже бере участь
+                    .participation__active Ти вже береш участь
                 .participation__image
                     picture
                         source(media="(min-width: 551px) and (orientation: landscape) and (min-height: 500px)" srcset="img/participation-img-desc.png")
@@ -116,6 +117,7 @@ section.home
                     .controls-right
                         .controls-right__arrow
                 a(href='#').task__button Виконати
+                .task__side Виконано: 0/3
             details.task__details
                 summary.task__summary Детальніше
                 .task__details-text

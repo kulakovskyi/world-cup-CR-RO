@@ -70,7 +70,7 @@ summary::marker
       margin: 0 0 35px 0
 
 
-.wrapper
+.wrapper-main
   overflow: hidden
   min-height: 100%
   background: url("../img/ellipse.svg") no-repeat 50% 37%/cover
@@ -182,6 +182,20 @@ summary::marker
     transition: background-color .3s ease
     &:hover
       background-color: $green-hover
+  //Вже бере участь
+  &__active
+    display: none
+    //display: inline-block
+    font-family: $font-suisse-semb
+    padding: 26px 40px 24px
+    font-size: 16px
+    line-height: 21px
+    letter-spacing: 0.08em
+    text-transform: uppercase
+    color: $grey
+    border: 1px solid $green
+    border-radius: 100px
+
 
 
 /***********************************FAQ SECTION***************************************/
@@ -250,6 +264,28 @@ summary::marker
     transition: background-color .3s ease
     &:hover
       background: $green-hover
+    //Недоступне
+    &._nonactive
+      background: rgba(5, 196, 137, 0.3)
+      pointer-events: none
+  //состояние кнопки под слайдером
+  &__side
+    display: none
+    font-family: $font-suisse-semb
+    padding: 22px 38px 20px
+    font-size: 22px
+    line-height: 29px
+    letter-spacing: 0.08em
+    color: #EDEDED
+    border-radius: 100px
+    //В процесі
+    &._load
+      background: #A1A1A1
+    //Завершене
+    &._done
+      background: $magenta
+
+
   &__info
     display: flex
     flex-direction: column
@@ -534,6 +570,9 @@ summary::marker
       width: 13px
       height: 13px
       background: url("../img/arrow.svg") no-repeat 50% 0/contain
+  &__details[open] > &__summary::before
+    top: 57%
+    transform: translateY(-50%) rotate(135deg)
 
 
 /***********************************TOURNAMENT SECTION***************************************/
@@ -688,6 +727,9 @@ summary::marker
     padding: 0 60px
     margin: 0 auto
     max-width: 1260px
+  &__details[open] > &__summary::before
+    top: 57%
+    transform: translateY(-50%) rotate(135deg)
   &__details-text
     padding-right: 30px
     .wrapper
