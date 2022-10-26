@@ -1,0 +1,258 @@
+$blue: #000055
+$magenta: #ff267e
+$green: #05C489
+$green-hover: #09B47F
+$grey: #EDEDED
+$text: #292929
+$greenBtn: #05C489
+
+$blue-back: #0F1933
+
+$violet: #2F2F6C
+
+$font-suisse-reg: SuisseIntl-Regular, sans-serif //
+$font-suisse-med: SuisseIntl-Medium, sans-serif //
+$font-suisse-semb: SuisseIntl-SemiBold, sans-serif //
+$font-wulkan: WulkanDisplay, sans-serif //
+
+
+body
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  overscroll-behavior: none
+  color: $grey
+  height: 100%
+  background: $blue-back
+
+  img
+    max-width: 100%
+    height: auto
+
+.wrapper
+  overflow: hidden
+  min-height: 100%
+
+.home
+  display: flex
+  justify-content: center
+  position: relative
+  &__image
+    max-width: 100%
+  &__title
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: absolute
+    top: 265px
+    left: 50%
+    transform: translateX(-50%)
+    &-top
+      font-family: $font-suisse-med
+      white-space: nowrap
+      font-size: 68px
+      line-height: 56px
+      text-transform: uppercase
+      color: $grey
+      padding: 22px 18px 20px
+      background: $magenta
+    &-bottom
+      font-family: $font-suisse-med
+      white-space: nowrap
+      font-size: 68px
+      line-height: 56px
+      text-transform: uppercase
+      color: $grey
+      padding: 22px 18px 20px
+      background: $magenta
+      margin-top: -10px
+      span
+        font-family: $font-wulkan
+  &__mouse
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 183px
+    &-body
+      width: 42px
+      height: 60px
+      border: 3px solid $grey
+      border-radius: 100px
+      display: flex
+      justify-content: center
+    &-wheel
+      width: 13.36px
+      height: 23.23px
+      background: $grey
+      border-radius: 100px
+      margin-top: 10px
+      animation: 1.8s infinite mouse-down ease
+
+
+.participation
+  &__container
+    max-width: 1310px
+    margin: 0 auto
+    padding: 0 0 0 60px
+  &__row
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &__info
+    max-width: 630px
+  &__title
+    font-family: $font-suisse-med
+    font-size: 50px
+    line-height: 52px
+    color: $grey
+    letter-spacing: 0.02em
+    margin: 0 0 55px 0
+    span
+      font-family: $font-wulkan
+  &__text
+    margin: 0 0 75px 0
+    p
+      font-family: $font-suisse-reg
+      font-size: 20px
+      line-height: 34px
+      color: $grey
+      &:not(:last-child)
+        margin: 0 0 40px 0
+      span
+        background: $magenta
+        padding: 0px 4px 2px
+  &__image
+    min-width: 552px
+  &__button
+    display: inline-block
+    font-family: $font-suisse-semb
+    font-size: 16px
+    line-height: 21px
+    color: $blue
+    padding: 26px 52px 24px
+    background-color: $green
+    letter-spacing: 0.08em
+    text-transform: uppercase
+    border-radius: 4px
+    transition: background-color .3s ease
+    &:hover
+      background-color: $green-hover
+
+
+.faq
+  padding: 110px 0 260px 0
+  &__container
+    max-width: 1357px
+    margin: 0 auto
+    padding: 0 60px
+  &__title
+    font-family: $font-suisse-med
+    text-align: center
+    font-size: 50px
+    line-height: 52px
+    letter-spacing: 0.02em
+    color: $grey
+    margin: 0 0 95px 0
+    span
+      font-family: $font-wulkan
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__item
+    display: flex
+    align-items: center
+    justify-content: center
+    &:not(:last-child)
+      margin: 0 60px 0 0
+    &-image
+      display: block
+      margin: 0 21px 0 0
+    &-text
+      font-family: $font-suisse-reg
+      font-size: 20px
+      line-height: 34px
+      color: $grey
+      white-space: nowrap
+
+
+.task
+  padding: 0 0 85px 0
+  &__container
+    padding: 0 60px
+    margin: 0 auto
+    max-width: 1260px
+  &__title
+    font-family: $font-suisse-med
+    font-size: 50px
+    line-height: 52px
+    color: $grey
+    margin: 0 0 75px 0
+    text-align: center
+
+  &__slider
+    &-item
+      width: 825px
+      height: 428px
+      @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+        background: url("../img/task-ticket-bg-desc.png") no-repeat 0 0/contain
+      @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+        background: url("../img/task-ticket-bg-tab.png") no-repeat 0 0/contain
+      @media screen and (max-width: 550px) and (orientation: portrait)
+        background: url("../img/task-ticket-bg-mob.png") no-repeat 0 0/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background: url("../img/task-ticket-bg-desc.png") no-repeat 0 0/contain
+
+
+.slider
+  &.not-enough-elems
+    .slider-wrapper
+      display: none
+
+  &:not(.not-enough-elems)
+    display: flex
+    justify-content: space-between
+    > *:not(.slider-wrapper)
+      display: none
+
+.slider-wrapper
+  width: 100%
+  position: relative
+  overflow-x: hidden
+  overflow-y: hidden
+  &.prev
+    .slider-inner
+      transform: translateX(33.3333333%)
+      transition: all .3s ease
+      -webkit-transition: transform .3s ease
+      -webkit-transition: -webkit-transform .3s ease
+
+  &.next
+    .slider-inner
+      transform: translateX(-33.3333333%)
+      transition: all .3s ease
+      -webkit-transition: transform .3s ease
+      -webkit-transition: -webkit-transform .3s ease
+
+.slider-inner
+  width: 300%
+  display: flex
+  flex-flow: row nowrap
+  justify-content: flex-start
+  margin-left: -100%
+
+.slider-page
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex: 0 0 33.33333%
+  overflow-x: hidden
+  overflow-y: hidden
+  justify-content: center
+  transition: all .3s ease
+
+@keyframes mouse-down
+  0%
+    transform: translateY(0)
+  50%
+    transform: translateY(3px) scale(0.95)
+  100%
+    transform: translateY(0)
