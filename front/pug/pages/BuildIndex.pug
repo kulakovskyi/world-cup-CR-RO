@@ -1,9 +1,9 @@
 section.home
     picture.home__image
-        source(media="(min-width: 551px) and (orientation: landscape) and (min-height: 500px)" srcset="img/home-photo-desc.jpg")
-        source(media="(min-width: 551px) and (max-width: 1024px) and (orientation: portrait)" srcset="img/home-photo-tab.jpg")
-        source(media="(max-width: 550px) and (orientation: portrait)" srcset="img/home-photo-tab.jpg")
-        source(media="(max-width: 920px) and (orientation: landscape) and (max-height: 450px)" srcset="img/home-photo-tab.jpg")
+        source(media="(min-width: 1025px) " srcset="img/home-photo-desc.jpg")
+        source(media="(min-width: 771px) and (max-width: 1024px) " srcset="img/home-photo-tab.jpg")
+        source(media="(min-width: 551px) and (max-width: 770px)" srcset="img/home-photo-tab-min.jpg")
+        source(media="(max-width: 550px)" srcset="img/home-photo-mob.jpg")
         img(src="img/home-photo-desc.jpg" alt="Favbet")
     h1.home__title
         .home__title-top Kod kuće kao
@@ -30,15 +30,17 @@ section.home
                             та домашні кінотеатри.
                         p.
                             Вболівай вдома , як на стадіоні.
-                    a(href="#").participation__button Взяти участь
-                    //Вже бере участь
-                    .participation__active Ти вже береш участь
+                    .info-participation
+                        a(href="#").participation__button Взяти участь
+                        //Вже бере участь
+                        .participation__active Ти вже береш участь
                 .participation__image
                     picture
-                        source(media="(min-width: 551px) and (orientation: landscape) and (min-height: 500px)" srcset="img/participation-img-desc.png")
-                        source(media="(min-width: 551px) and (max-width: 1024px) and (orientation: portrait)" srcset="img/participation-img-tab.png")
-                        source(media="(max-width: 550px) and (orientation: portrait)" srcset="img/participation-img-mob.png")
-                        source(media="(max-width: 920px) and (orientation: landscape) and (max-height: 450px)" srcset="img/participation-img-mob.png")
+                        source(media="(min-width: 1025px)" srcset="img/participation-img-desc.png")
+                        source(media="(min-width: 771px) and (max-width: 1024px)" srcset="img/participation-img-tab.png")
+                        source(media="(min-width: 601px) and (max-width: 770px)" srcset="img/participation-img-tab-min.png")
+                        source(media="(max-width: 600px) " srcset="img/participation-img-mob.png")
+
                         img(src="img/participation-img-desc.png" alt="Favbet")
     section.faq
         .faq__container
@@ -59,7 +61,7 @@ section.home
     section.task
         .task__container
             h2.task__title Завдання
-            .task__info
+            .task__info.leftImageHidden
                 .task__slider#task-slider
                     .task__slider-item
                         .task__slider-info
@@ -116,6 +118,10 @@ section.home
                         .controls-left__arrow
                     .controls-right
                         .controls-right__arrow
+                .task-counter
+                    .active-slide 1
+                    span /
+                    .all-slide 8
                 a(href='#').task__button Виконати
                 .task__side Виконано: 0/3
             details.task__details
@@ -178,10 +184,11 @@ section.home
             .prize__row
                 .prize__image
                     picture
-                        source(media="(min-width: 551px) and (orientation: landscape) and (min-height: 500px)" srcset="img/prize-img-desc.png")
-                        source(media="(min-width: 551px) and (max-width: 1024px) and (orientation: portrait)" srcset="img/prize-img-tab.png")
-                        source(media="(max-width: 550px) and (orientation: portrait)" srcset="img/prize-img-tab.png")
-                        source(media="(max-width: 920px) and (orientation: landscape) and (max-height: 450px)" srcset="img/prize-img-tab.png")
+                        source(media="(min-width: 1025px) " srcset="img/prize-img-desc.png")
+                        source(media="(min-width: 771px) and (max-width: 1024px)" srcset="img/prize-img-tab.png")
+                        source(media="(max-width: 770px) " srcset="img/prize-img-tab-min.png")
+                        source(media="(min-width: 551px) and (max-width: 770px)" srcset="img/home-photo-tab-min.jpg")
+                        source(media="(max-width: 550px)" srcset="img/prize-img-tab-min.png")
                         img(src="img/prize-img-desc.png" alt="Favbet")
                 .prize__info
                     h2.prize__title Призи

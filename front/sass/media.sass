@@ -1,583 +1,571 @@
 @media screen and (min-width: 2050px)
-  .line-1
-    margin-top: -105px
-  .buy
-    padding: 86px 0 81px 0
-  .youtube
-    padding: 170px 0 30px 0
+  .wrapper-main
+    background: url(../img/ellipse.svg) no-repeat 50% 18%/cover
 
-@media screen and (max-width: 1112px)
-  .auto
-    &__container
-      display: flex
+@media screen and (max-width: 1700px)
+  .home
+    &__title
+      top: 170px
+
+@media screen and (max-width: 1450px)
+  .home
+    &__title
+      top: 140px
+
+    &__mouse
+      bottom: 100px
+
+@media screen and (max-width: 1280px)
+  .home
+    &__title
+      top: 105px
+
+      &-top,
+      &-bottom
+        font-size: 49px
+        line-height: 41px
+        padding: 16px 14px 14px
+
+      &-bottom
+        margin-top: -7px
+
+    &__mouse
+      bottom: 70px
+
+@media screen and (max-width: 1180px)
+  .participation
+    &__text
+      margin: 0 0 70px 0
+
+      p
+        font-size: 16px
+        line-height: 30px
+
+        &:not(:last-child)
+          margin: 0 0 35px 0
+
+    &__image
+      position: relative
+      right: 80px
+
+    &__title
+      white-space: nowrap
+  .faq
+    padding: 115px 0 205px 0
+
+    &__item
+      &:not(:last-child)
+        margin: 0 0 0 0
+
+      img
+        max-width: 75px
+        margin: 0 15px 0 0
+
+      &-text
+        font-size: 14px
+        line-height: 24px
+  .task
+    padding: 0 0 160px 0
+
+    &__info
+      &::before
+        right: -739px
+
+      &::after
+        left: -739px
+
+
+@media screen and (max-width: 1024px)
+  .home
+    &__title
+      top: 190px
+
+    &__mouse
+      bottom: auto
+      top: 570px
+
+@media screen and (max-width: 980px)
+  .home
+    &__title
+      top: 90px
+
+    &__mouse
+      bottom: 90px
+      top: auto
+  .participation
+    &__row
       flex-direction: column
       align-items: center
-    &__logo
-      max-width: 400px
-    &__image
-      max-width: 604px
-      margin: 0 auto
-    &__left
-      transform: translateY(-80%)
-      &-none
-        width: 76px
-        height: 46px
-        margin: 0 0 20px 0
-        &.load
-          max-width: 75px
-          margin: 0 0 10px 0
-          &::before
-            height: 50px
-            right: -10px
-        &.done
-          max-width: 97px
-          margin: 0 0 10px -8px
 
-    &__right
-      transform: translateY(-80%)
-      &-none
-        width: 76px
-        height: 46px
-        margin: 0 0 20px 0
-        &.load
-          max-width: 75px
-          margin: 0 0 10px 0
-          &::before
-            height: 50px
-            right: -10px
-        &.done
-          max-width: 93px
-          margin: 0 0 10px 0
-    &__info
-      position: relative
-      flex-wrap: nowrap
-      justify-content: center
-      margin-top: -39px
-    &__text
-      position: absolute
-      left: 19px
-      top: -20px
-    &__button
-      transform: scale(0.9)
-  .game
-    padding: 185px 0 90px 0
     &__title
-      font-size: 76px
-      line-height: 101px
+      white-space: pre-wrap
+
+    &__image
+      position: static
+      right: auto
+
+    &__container
+      padding: 0 60px
+
     &__info
+      max-width: 100%
+      margin: 0 0 50px 0
+  .faq
+    &__row
+      display: grid
+      grid-template-columns: calc(50% - 15px) calc(50% - 15px)
+      gap: 80px 30px
+
+    &__item
+      display: flex
+      flex-direction: column
+
+      img
+        max-width: 100%
+        margin: 0 0 30px 0
+
       &-text
-        padding: 56px 67px
-        width: auto
-        p
-          max-width: 471px
-  .line-1
-    height: 107px
-  .buy
-    padding: 40px 0 90px 0
+        font-size: 33px
+        line-height: 53px
+        white-space: normal
+        text-align: center
+  .task
+    padding: 0 0 160px 0
     &__info
-      transform: scale(0.8)
-    &__row
-      margin-top: -30px
-    &__item
-      &-none
-        &.load
-          width: 95px
-          &::before
-            height: 44px
-            right: -10px
-  .youtube
-    margin-top: -58px
+      &::before,
+      &::after
+        content: none
+        background: none
 
-@media screen and (max-width: 1042px)
-  .auto
-    &__buy
-      margin: 0 auto 168px auto
-      &-controls
-        width: 200px
-        top: auto
-        transform: translateY(0) translateX(-50%)
-        bottom: -110px
-
-
-
-@media screen and (max-width: 963px)
-  .auto
-    &__info
-      transform-origin: center
-      transform: scale(0.9)
-  .buy
-    &__item
-      &-none
-        width: 55px
-        height: 30px
-        margin: 0 10px 0 0
-        &.done
-          width: 66px
-          height: 30px
-          margin: 0 10px 0 0
-        &.load
-          width: 55px
-          height: 30px
-          margin: 0 10px 0 0
-          &::before
-            height: 34px
-            right: -18px
-
-@media screen and (max-width: 873px)
-  .auto
-    &__info
-      transform-origin: center
-      transform: scale(0.8)
-  .buy
-    &__row
-      margin: -30px 0 75px 0
-    &__image
-      .border
-        width: 97%
-        height: 100%
-      .blick
-        width: 97%
-        height: 100%
-
-@media screen and (max-width: 817px)
-  .buy
-    &__image
-      .border
-        left: 36px
-        top: -21px
-      .blick
-        left: 36px
-        top: -21px
-
-  .auto
-    &__buy
-      position: absolute
-      left: 50%
-      transform: scale(0.8) translateX(-62%)
-      margin: -70px auto 92px auto
-      &-controls
-        transform: translateY(0) translateX(-50%) scale(1.2)
-  .youtube
-    padding: 100px 0 601px 0
-
-
-@media screen and (max-width: 778px)
-  .auto
-    padding: 10px 0 126px 0
-    &__info
-      transform-origin: center
-      transform: scale(0.7)
-      margin-top: -90px
-    &__right
-      transform-origin: right center
-      transform: translateY(-70%) scale(0.85)
-    &__left
-      transform-origin: left center
-      transform: translateY(-70%) scale(0.85)
-  .game
-    padding: 100px 0 74px 0
-    &__arrow
-      max-width: 61px
-      top: -35px
     &__title
       font-size: 64px
-      line-height: 84px
-      margin-bottom: 37px
-      -webkit-text-stroke-width: 1.5px
-    &__text
-      font-size: 32px
-      line-height: 46px
-      max-width: 620px
-      margin-bottom: 50px
-    &__info
-      margin: 0 0 30px 0
-      &-arrow
-        img
-          max-width: 62px
-    &__sub-title
-      font-size: 48px
-      line-height: 63px
+      line-height: 83px
       margin: 0 0 35px 0
-      -webkit-text-stroke-width: 1.5px
-      text-shadow: 4px 3px 0px $magenta, 5px 8px 0px $blue
+  .prize
     &__row
-      display: grid
-      grid-template-columns: 1fr 1fr
-      grid-template-rows: 1fr 1fr
-      max-width: 650px
-      margin: 0 auto 70px auto
-    &__item
-      margin: 0
-      &-img
-        margin: 0 0 10px 0
-        img
-          max-width: 200px
-      &-text
-        font-size: 20px
-        line-height: 36px
-  .buy
-    padding: 12px 0 81px 0
-    &__info
-      transform: scale(0.6)
+      flex-direction: column-reverse
+      align-items: center
+      margin: 0 0 80px 0
     &__image
-      &-wrap
-        max-width: 560px
-        .border
-          left: 27px
-          top: -11px
-        .blick
-          left: 27px
-          top: -11px
-    &__row
-      margin: -53px 0 75px 0
-    &__item
-      &-done
-        width: 66px
-        height: 30px
-        margin: 0 10px 0 0
-      &-load
-        width: 55px
-        height: 30px
-        margin: 0 10px 0 0
-      &-none
-        width: 55px
-        height: 30px
-        margin: 0 10px 0 0
-  .youtube
+      margin: 0
     &__title
-      font-size: 48px
-      line-height: 63px
-      margin: 0 0 28px 0
-      -webkit-text-stroke-width: 1.5px
-      text-shadow: 4px 3px 0px $magenta, 5px 8px 0px $blue
+      text-align: center
+    &__text
+      text-align: center
 
+@media screen and (max-width: 860px)
+  .task-counter
+    display: flex
+    font-size: 52px
+    line-height: 63px
+    position: absolute
+    left: 0
+    bottom: 0
+    .active-slide,
+    .all-slide,
+    span
+      font-family: $font-suisse-med
 
-
-
-@media screen and (max-width: 700px)
-  .auto
-    &__right
-      display: none
-    &__left
-      display: none
+  .task
     &__info
-      transform-origin: center
-      transform: scale(0.6)
-  .buy
-    &__row
-      margin: 0 0 40px 0
-      display: grid
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr
-      justify-items: center
-      gap: 15px 25px
-    &__item
-      &-none
-        width: 95%
-        height: 60px
-        margin: 0
-        &.done
-          width: 120%
-          height: 60px
-          margin: 0
-        &.load
-          width: 95%
-          height: 60px
-          margin: 0
-          &::before
-            height: 57px
-            right: 2px
+      margin: 0 0 160px 0
+      &::after
+        content: ''
+        position: absolute
+        top: 20px
+        left: -72px
+        width: 70px
+        height: 755px
+        background: url("../img/task-ticket-blur-min-tab.png") no-repeat 50% 0%/contain
+      &::before
+        content: ''
+        position: absolute
+        transform: scale(-1)
+        top: 20px
+        right: -72px
+        width: 70px
+        height: 755px
+        background: url("../img/task-ticket-blur-min-tab.png") no-repeat 50% 0%/contain
 
-@media screen and (max-width: 660px)
-  .game
-    padding: 118px 0 84px 0
+    &__slider
+      max-width: 620px
+      &-item
+        width: 587px
+        height: 756px
+
+      &-info
+        width: 494px
+        height: 597px
+        display: flex
+        flex-direction: column
+        border: 4px solid #0C1630
+        border-radius: 29px
+
+      &-time
+        padding: 31px 33px 24px
+        border: none
+        border-bottom: 4px solid #0C1630
+        flex-direction: row
+
+        .time
+          margin: 0 20px 0 0
+          font-size: 22px
+          line-height: 57px
+          padding: 8px 20px 6px
+          border: 2px solid #DBDBDB
+
+        .text
+          margin: 0
+          padding: 8px 20px 6px
+          font-size: 22px
+          line-height: 57px
+          border: 2px solid $magenta
+
+      &-text
+        font-size: 28px
+        line-height: 45px
+        padding: 22px 32px
+        flex: 1 1 auto
+        border: none
+        border-bottom: 4px solid #0C1630
+
+      &-prize
+        padding: 13px 31px 60px
+
+        img
+          width: 50px
+
+        p
+          font-size: 22px
+          line-height: 38px
+    &__button
+      position: relative
+      top: 110px
+
+@media screen and (max-width: 770px)
+  .wrapper-main
+    position: relative
+    z-index: 5
+    top: -330px
+    padding: 330px 0 0 0
+  .home
+    &__mouse
+      display: none
+
     &__title
-      font-size: 54px
-      line-height: 74px
-    &__info-text
-      padding: 50px 67px
-      p
-        font-size: 18px
-        line-height: 33px
-  .auto
-    &__buy
+      display: flex
+      flex-direction: column
+      align-items: flex-start
       position: absolute
+      top: 0
+      left: 0
+      transform: translateX(0)
+
+      &-top,
+      &-bottom
+        font-size: 69px
+        line-height: 58px
+  .participation
+    position: relative
+
+    .info-participation
+      position: absolute
+      top: -330px
       left: 50%
-      transform: scale(0.6) translateX(-83%)
-      margin: -136px auto 92px auto
-      &-controls
-        transform: translateY(0) translateX(-50%) scale(1.2)
-  .youtube
-    padding: 100px 0 435px 0
+      transform: translateX(-50%)
+      width: 86%
+
+    &__button
+      font-size: 30px
+      line-height: 39px
+      padding: 46px 46px 44px
+      width: 100%
+      text-align: center
+
+    &__info
+      margin: -100px 0 50px 0
+
+    &__image
+      width: 130%
+
+    &__text
+      margin: 0
+  .faq
+    padding: 0 0 135px 0
+
+    &__title
+      font-size: 64px
+      line-height: 83px
+      margin: 0 0 100px 0
+  .task
+    padding: 0 0 90px 0
+  .prize
+    padding: 0 0 80px 0
+    &__image
+      width: 120%
+    &__row
+      margin: 0 0 25px 0
+    &__title
+      font-size: 64px
+      line-height: 83px
+      margin: 0 0 40px 0
+    &__text
+      font-size: 30px
+      line-height: 56px
+      margin: 0 0 65px 0
+      text-align: start
+      max-width: 100%
+    &__item
+      font-size: 30px
+      line-height: 56px
+      &::before
+        width: 24px
+        height: 24px
+  .tournament
+    &__title
+      font-size: 64px
+      line-height: 98px
+    &__button
+      padding: 44px 30px 42px
+      width: 100%
+      font-size: 30px
+      line-height: 39px
+      text-align: center
+
+
+@media screen and (max-width: 720px)
+  .task
+    &__info
+      &::after,
+      &::before
+        content: none
+  .tournament
+    &__container
+      padding: 0 15px
+
+
+
 
 
 @media screen and (max-width: 600px)
-  .auto
-    &__logo
-      margin: 0 0 -10px 0
-    &__info
-      flex-direction: column
-      align-items: center
-      margin-top: 14px
-      transform: scale(1)
-      width: 100%
-      padding: 0 15px
-    &__progress
-      margin: 0
-      width: 100%
-      height: 20px
-      .myProgress
-        .arrow-right
-          transform-origin: left center
-          transform: translateY(-50%) skewX(30deg) scale(-0.6)
-          right: -140px
-        .percetn
-          font-size: 14px
-          line-height: 18px
-          width: 62px
-          height: 44px
-          padding: 17px 45px 7px 8px
-          -webkit-text-stroke-width: 1px
+  [class*="__summary"]
+    font-size: 14px
+    line-height: 18px
+    padding: 22px 22px 20px
+    &::before
+      right: 22px
+      width: 12px
+      height: 12px
+
+
+  [class*="__details-text"]
+    padding: 25px 20px
+    p
+      &:not(:last-child)
+        margin: 0 0 15px 0
+
+  .home
+    &__title
+      &-top,
+      &-bottom
+        padding: 9px 10px 7px
+        font-size: 37px
+        line-height: 31px
+
+      &-bottom
+        margin-top: -1px
+  .participation
     &__button
-      transform: scale(0.7)
-    &__text
-      font-size: 15px
-      line-height: 20px
-      left: 31px
-      top: -28px
-      -webkit-text-stroke-width: 1.2px
-  .game
-    position: relative
-    padding: 85px 0 64px 0
+      font-size: 16px
+      line-height: 21px
+      padding: 26px 25px 24px
+
+    .info-participation
+      width: 92%
+      top: -120px
+
     &__container
-      display: block
+      padding: 0 15px
+
+    &__info
+      margin: 0px 0 50px 0
+
     &__title
-      -webkit-text-stroke-width: 1.5px
       font-size: 34px
-      line-height: 48px
+      line-height: 42px
+      text-align: center
       margin: 0 0 30px 0
-      text-shadow: 2px 3px 0px $magenta, 3px 6px 0px $blue
+
     &__text
-      font-size: 24px
-      line-height: 36px
+      p
+        font-size: 18px
+        line-height: 28px
+
+        &:not(:last-child)
+          margin: 0 0 30px 0
+
     &__info
-      &-text
-        padding: 47px 0
-        p
-          font-size: 17px
-          line-height: 30px
-          max-width: 263px
-      &-img
-        img
-          max-width: 130%
-    &__sub-title
-      font-size: 34px
-      line-height: 45px
-      -webkit-text-stroke-width: 1px
-      text-shadow: 4px 3px 0px $magenta, 5px 7px 0px $blue
+      margin: 0 0 20px 0
+
+    &__image
+      width: 130%
+  .faq
+    padding: 0 0 45px 0
+    &__container
+      padding: 0 15px
     &__row
-      gap: 30px
-      grid-template-rows: calc(50% - 55px) calc(50% - 55px)
-      grid-template-columns: calc(50% - 15px) calc(50% - 15px)
-      align-items: start
+      gap: 45px 15px
+      grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px)
       justify-items: center
+      align-items: center
+
     &__item
-      display: flex
-      flex-direction: column
 
-      &-img
-        margin: 0 0 13px 0
-        max-width: 100%
-        flex: 1 1 auto
-        img
-          max-width: 150px
+      img
+        margin: 0 0 15px 0
+        max-width: 80px
+
       &-text
-        font-size: 15px
-        line-height: 26px
-        -webkit-text-stroke-width: 1px
-        max-width: 170px
-    &__button
-      position: absolute
-      left: 50%
-      bottom: 16px
-      z-index: 6
-      transform: scale(0.6) translateX(-80%)
-      transform-origin: center
-      margin: auto
-  .line-1
-    height: 75px
-    margin-top: -41px
-  .buy
-    padding: 87px 0 130px 0
-    position: relative
-    z-index: -1
-    &__item
-      &-none
-        &.load
-          &::before
-            height: 44px
-            right: -4px
-    &__image
-      &-wrap
-        .border
-          left: 16px
-          top: -7px
-        .blick
-          left: 16px
-          top: -7px
-    &__button
-      position: absolute
-      left: 50%
-      bottom: 45px
-      z-index: 40
-      transform: scale(0.6) translateX(-80%)
-      transform-origin: center
-    //margin: auto
+        font-size: 18px
+        line-height: 28px
+        white-space: normal
 
-    &__info
-      transform: scale(1)
-      margin-left: -15px
-      &-wrap
-        flex: 1 1 auto
-      &-percent
-        font-size: 24px
-        line-height: 32px
-        -webkit-text-stroke-width: 1.5px
-        width: 95px
-        height: 95px
-        padding: 30px 20px 14px 25px
-      &-progress
-        width: 100%
-        height: 20px
-        margin: 0 0 6px 0
-        .arrow-right
-          transform-origin: left center
-          transform: translateY(-50%) skewX(30deg) scale(-0.6)
-          right: -68px
-      &-text
-        font-size: 15px
-        line-height: 20px
-        -webkit-text-stroke-width: 1.2px
-
-  .youtube
-    margin-top: -39px
-    padding: 52px 0 436px 0
     &__title
-      -webkit-text-stroke-width: 1px
       font-size: 34px
-      line-height: 45px
-      text-shadow: 4px 3px 0px $magenta, 5px 7px 0px $blue
-      max-width: 371px
-      margin: 0 auto 13px auto
-    &__info
-      &-text
-        -webkit-text-stroke-width: 1.2px
-        font-size: 15px
-        line-height: 35px
-
-
-
-@media screen and (max-width: 500px)
-  .auto
-    &__buy
-      margin: -168px auto 121px auto
-      transform: scale(0.46) translateX(-109%)
-      &-controls
-        bottom: -135px
-      &-info
-        .controls__button
-          position: absolute
-          bottom: -360px
-          left: 50%
-          transform: translateX(-50%) scale(1.55)
-        .controls-text
-          flex: 0 1 auto
-          transform: scale(1.95)
-          position: relative
-          right: 69px
-        .controls-play
-          transform: scale(1.25)
-          position: relative
-          top: -5px
-  .youtube
-    padding: 52px 0 461px 0
-  .buy
-    &__item
-      &-none
-        &.load
-          &::before
-            height: 36px
-            right: -16px
-
-
-
-
-@media screen and (max-width: 470px)
-  .buy
-    &__row
-      margin: 0 0 11px 0
-
-@media screen and (max-width: 415px)
-  .buy
-    &__item
-      &-none
-        &.load
-          &::before
-            height: 27px
-            right: -14px
-    &__row
-      margin: 0
-      gap: 0px 15px
-
-@media screen and (max-width: 366px)
-  .auto
-    &__progress
-      .myProgress
-        .arrow-right
-          display: none
-    &__buy
-      margin: -192px auto 121px auto
-      transform: scale(0.38) translateX(-132%)
-  .youtube
-    padding: 52px 0 382px 0
-
-
-
-
-@media screen and (max-width: 360px)
-  .game
+      line-height: 44px
+      margin: 0 0 55px 0
+  .task
+    .task-counter
+      font-size: 28px
+      line-height: 71px
+    &__container
+      padding: 0 15px
+    &__slider
+      transform-origin: top center
+      transform: scale(0.7)
+      margin: 0 0 -200px 0
     &__title
-      font-size: 31px
-      line-height: 45px
-    &__info
-      &-text
-        p
-          font-size: 15px
-          line-height: 29px
+      font-size: 34px
+      line-height: 44px
+      margin: 0 0 20px 0
+  .prize
+    padding: 0 0 45px 0
+    &__container
+      padding: 0 15px
+    &__list
+      gap: 0
+      row-gap: 25px
+      column-gap: 10px
+    &__title
+      font-size: 34px
+      line-height: 44px
+      margin: 0 0 25px 0
+    &__text
+      font-size: 16px
+      line-height: 30px
+      margin: 0 0 35px 0
     &__item
-      &-img
-        img
-          max-width: 134px
-      &-text
-        font-size: 14px
-        line-height: 23px
-  .buy
-    &__item
-      &-none
-        &.load
-          &::before
-            height: 27px
-            right: -23px
-
-@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
-  .buy
+      font-size: 16px
+      line-height: 30px
+      &::before
+        width: 13px
+        height: 13px
     &__image
-      &-wrap
-        .border
-          left: 15px
-          top: -6px
-        .blick
-          left: 15px
-          top: -6px
+      min-width: 400px
+  .tournament
+    padding: 0 0 70px 0
+    &__container
+      &::before,
+      &::after
+        content: none
+        background: none
+    &__title
+      font-size: 34px
+      line-height: 52px
+      text-align: center
+      margin: 0 0 25px 0
+    &__button
+      font-size: 16px
+      line-height: 21px
+      padding: 25px 20px 23px
+    &__details
+      margin: 0 0 40px 0
+  .resultTable
+    margin: 0 0 25px 0
+    padding: 24px 13px 20px
+    &__head
+      margin: 0 0 17px 0
+      &-check,
+      &-points,
+      &-prize
+        font-size: 11px
+        line-height: 14px
+      &-prize
+        padding: 0 55px 0 0
+      &-points
+        padding: 0 54px 0 0
+      &-check
+        padding: 0 50px 0 0
+    &__body
+      padding: 0 10px 0 0
+      height: 350px
+      &-item
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4)
+          .resultTable__body-number:after
+            content: ''
+            background: url("../img/star-tournamnet.svg") no-repeat 50% 0/contain
+            width: 15px
+            height: 15px
+            margin: 0 0 0 10px
+          .resultTable__body-number
+            font-size: 16px
+            line-height: 21px
+      &::-webkit-scrollbar
+        width: 2px
+        background: rgba(217, 217, 217, 0.2)
+        border-radius: 100px
+        margin: 0 0 0 50px
+      &-number,
+      &-check,
+      &-points,
+      &-prize
+        height: 70px
+        font-size: 11px
+        line-height: 14px
+      &-number
+        padding-left: 20px
+        width: 21%
+      &-prize
+        padding-right: 20px
+        width: 29%
+
+  .rules
+    &__container
+      padding: 0 15px
+    &__details-text
+      padding-right: 12px
+      .wrapper
+        padding-right: 12px
+        &::-webkit-scrollbar
+          width: 4px
 
 
+
+@media screen and (max-width: 440px)
+  .participation
+    &__image
+      width: 140%
+      min-width: auto
+  .task
+    &__slider
+      transform: scale(0.6)
+      margin: 0 0 -289px 0
+
+@media screen and (max-width: 374px)
+  .task
+    &__slider
+      transform: scale(0.5)
+      margin: 0 0 -370px 0
 

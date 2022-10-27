@@ -1,7 +1,7 @@
 $blue: #000055
 $magenta: #ff267e
 $green: #05C489
-$green-hover: #09B47F
+$green-hover: #00AE78
 $grey: #EDEDED
 $text: #292929
 $greenBtn: #05C489
@@ -44,6 +44,7 @@ summary::marker
   background: #141E50
   border-radius: 10px
   position: relative
+  transition: background-color .3s ease
   &::before
     content: ''
     position: absolute
@@ -54,6 +55,9 @@ summary::marker
     border-left: 3px solid $grey
     border-bottom: 3px solid $grey
     transform: translateY(-50%) rotate(-45deg)
+  &:hover
+    background: #17255D
+
 
 [class*="__details-text"]
   padding: 45px 60px 40px 35px
@@ -124,13 +128,30 @@ summary::marker
       border-radius: 100px
       display: flex
       justify-content: center
+      position: relative
     &-wheel
-      width: 13.36px
-      height: 23.23px
-      background: $grey
+      position: absolute
+      top: 7px
+      left: 0
+      right: 0
+      margin: auto
+      width: 11px
+      height: 11px
       border-radius: 100px
-      margin-top: 10px
-      animation: 1.8s infinite mouse-down ease
+      background: $grey
+      animation: scroll 1.8s infinite linear
+      @keyframes scroll
+        0%
+          transform: scaleY(1) translateY(0)
+        20%
+          transform: scaleY(1.5) translateY(5px)
+          height: 15px
+        60%
+          transform: scaleY(.7) translateY(15px)
+          opacity: 0
+        to
+          transform: scaleY(.5) translateY(0)
+          opacity: 0
 
 
 /***********************************PARTICIOATION SECTION***************************************/
@@ -164,6 +185,7 @@ summary::marker
       &:not(:last-child)
         margin: 0 0 40px 0
       span
+        white-space: nowrap
         background: $magenta
         padding: 0px 4px 2px
   &__image
@@ -300,6 +322,7 @@ summary::marker
       width: 760px
       height: 392px
       background: url("../img/task-ticket-blur.png") no-repeat 50% 0%/contain
+      transition: opacity .3s ease
     &::after
       content: ''
       position: absolute
@@ -308,9 +331,16 @@ summary::marker
       width: 760px
       height: 392px
       background: url("../img/task-ticket-blur.png") no-repeat 50% 0%/contain
+      transition: opacity .3s ease
+    &.leftImageHidden::after
+      opacity: 0
+    &.rightImageHidden::before
+      opacity: 0
+
+
 
   &__slider
-    max-width: 975px
+    max-width: 855px
     margin: 0 0 70px 0
     &-item
       width: 825px
@@ -318,14 +348,15 @@ summary::marker
       display: flex
       align-items: center
       justify-content: center
-      @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+      @media screen and (min-width: 551px)
         background: url("../img/task-ticket-bg-desc.png") no-repeat 0 0/contain
-      @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+      @media screen and (min-width: 551px) and (max-width: 1024px)
+        background: url("../img/task-ticket-bg-desc.png") no-repeat 0 0/contain
+      @media screen and (max-width: 860px)
         background: url("../img/task-ticket-bg-tab.png") no-repeat 0 0/contain
-      @media screen and (max-width: 550px) and (orientation: portrait)
-        background: url("../img/task-ticket-bg-mob.png") no-repeat 0 0/contain
-      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
-        background: url("../img/task-ticket-bg-desc.png") no-repeat 0 0/contain
+      @media screen and (max-width: 550px)
+        background: url("../img/task-ticket-bg-tab.png") no-repeat 0 0/contain
+
     &-info
       width: 705px
       height: 370px
@@ -394,6 +425,9 @@ summary::marker
     transform: translateY(-50%) rotate(135deg)
 
 //controls slider styles
+.task-counter
+  display: none
+
 .task-controls
   display: flex
   align-items: center
@@ -402,6 +436,12 @@ summary::marker
   bottom: 10px
   right: 0
 
+.controls-left,
+.controls-right
+  &.arrow-disabled
+    pointer-events: none
+
+
 .controls-left__arrow
   width: 50px
   height: 50px
@@ -409,7 +449,7 @@ summary::marker
   border-radius: 50%
   position: relative
   margin: 0 20px 0 0
-  transition: border-color .3s ease
+  transition: background-color .3s ease
   cursor: pointer
   &::before
     content: ''
@@ -437,7 +477,9 @@ summary::marker
   &:hover::before
     background: $green-hover
   &:hover
-    border-color: $green-hover
+    background: rgba(5, 196, 137, 0.1)
+  &:active
+    background: rgba(5, 196, 137, 0.3)
 
 .controls-right__arrow
   width: 50px
@@ -445,8 +487,10 @@ summary::marker
   border: 1px solid $green
   border-radius: 50%
   position: relative
-  transition: border-color .3s ease
+  transition: background-color .3s ease
   cursor: pointer
+  &.arrow-disabled
+    pointer-events: none
   &::before
     content: ''
     position: absolute
@@ -473,7 +517,9 @@ summary::marker
   &:hover::before
     background: $green-hover
   &:hover
-    border-color: $green-hover
+    background: rgba(5, 196, 137, 0.1)
+  &:active
+    background: rgba(5, 196, 137, 0.3)
 
 .slider
   &.not-enough-elems
@@ -745,14 +791,3 @@ summary::marker
         background: $magenta
         border-radius: 100px
 
-
-
-
-
-@keyframes mouse-down
-  0%
-    transform: translateY(0)
-  50%
-    transform: translateY(3px) scale(0.95)
-  100%
-    transform: translateY(0)
