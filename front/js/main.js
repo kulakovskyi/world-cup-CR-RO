@@ -3,13 +3,13 @@ let prizesLeftArrow = document.querySelector('.controls-left'),
     prizesRightArrow = document.querySelector('.controls-right');
 
 // left and right image slider
-const sliderInfo = document.querySelector('.task__info');
+//const sliderInfo = document.querySelector('.task__info');
 
 
 //counter slide on medea 890
 const allSlides = document.querySelector('.all-slide')
-const counterSlide = document.querySelector('.active-slide')
-let count = 1;
+// const counterSlide = document.querySelector('.active-slide')
+// let count = 1;
 
 
 var slider1 = slider(
@@ -29,12 +29,12 @@ function slider(id, itemSelector, leftArrow, rightArrow, autoplay, config) {
     var items = el.querySelectorAll(itemSelector);
     var timerId;
 
-    function allSlide(){
-        let lengthSlide = items.length ;
-        allSlides.innerHTML = lengthSlide;
-
-    }
-    allSlide()
+    // function allSlide(){
+    //     let lengthSlide = items.length ;
+    //     allSlides.innerHTML = lengthSlide;
+    //
+    // }
+    // allSlide()
 
     function getMediaStep() {
         var width = window.innerWidth;
