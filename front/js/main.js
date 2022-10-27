@@ -96,14 +96,14 @@ function slider(id, itemSelector, leftArrow, rightArrow, autoplay, config) {
 
                     if (x - startX > 30 ) {
                         toggleIndex(activeIndIndex - 1)
-                        count--
-                        counterSlide.innerHTML = count;
+                        //count--
+                        //counterSlide.innerHTML = count;
                         //sliderInfo.classList.remove('rightImageHidden')
 
                     } else if (startX - x > 30) {
                         toggleIndex(activeIndIndex + 1)
-                        count++
-                        counterSlide.innerHTML = count;
+                        //count++
+                        //counterSlide.innerHTML = count;
                         //sliderInfo.classList.remove('leftImageHidden')
                     }
 
@@ -111,23 +111,23 @@ function slider(id, itemSelector, leftArrow, rightArrow, autoplay, config) {
                     inner.style.transform = ''
                 }
                 touched = false
-                if(activeIndIndex === 0 ){
-                    count = 1
-                    counterSlide.innerHTML = count;
-                    //sliderInfo.classList.add('leftImageHidden')
-                }
-                if(activeIndIndex === items.length - 1 ){
-                    count = 5
-                    counterSlide.innerHTML = count;
-                    //sliderInfo.classList.add('rightImageHidden')
-                }
+                // if(activeIndIndex === 0 ){
+                //     count = 1
+                //     counterSlide.innerHTML = count;
+                //     //sliderInfo.classList.add('leftImageHidden')
+                // }
+                // if(activeIndIndex === items.length - 1 ){
+                //     count = 5
+                //     counterSlide.innerHTML = count;
+                //     //sliderInfo.classList.add('rightImageHidden')
+                // }
             }
 
             rightArrow.addEventListener('click', () => {
                 toggleIndex(activeIndIndex + 1)
                 // obj.next()
-                count++
-                counterSlide.innerHTML = count;
+                // count++
+                // counterSlide.innerHTML = count;
                 // if(activeIndIndex >= 0){
                 //     sliderInfo.classList.remove('leftImageHidden')
                 // } else {
@@ -145,8 +145,8 @@ function slider(id, itemSelector, leftArrow, rightArrow, autoplay, config) {
             leftArrow.addEventListener('click', () => {
                 toggleIndex(activeIndIndex - 1)
                 // obj.prev()
-                count--
-                counterSlide.innerHTML = count;
+                // count--
+                // counterSlide.innerHTML = count;
                 // if(activeIndIndex === items.length - 1){
                 //     sliderInfo.classList.add('rightImageHidden')
                 // } else {
