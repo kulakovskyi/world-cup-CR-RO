@@ -77,7 +77,7 @@ summary::marker
 .wrapper-main
   overflow: hidden
   min-height: 100%
-  background: url("../img/ellipse.svg") no-repeat 50% 37%/cover
+  //background: url("../img/ellipse.svg") no-repeat 50% 37%/cover
 
 
 /***********************************HOME SECTION***************************************/
@@ -336,8 +336,10 @@ summary::marker
       opacity: 0
     &.rightImageHidden::before
       opacity: 0
-
-
+    .task-wrap
+      display: flex
+      align-items: center
+      justify-content: center
 
   &__slider
     max-width: 855px
@@ -356,7 +358,6 @@ summary::marker
         background: url("../img/task-ticket-bg-tab.png") no-repeat 0 0/contain
       @media screen and (max-width: 550px)
         background: url("../img/task-ticket-bg-tab.png") no-repeat 0 0/contain
-
     &-info
       width: 705px
       height: 370px
@@ -440,6 +441,7 @@ summary::marker
 .controls-right
   &.arrow-disabled
     pointer-events: none
+    cursor: default
 
 
 .controls-left__arrow
@@ -565,7 +567,7 @@ summary::marker
   flex: 0 0 33.33333%
   overflow-x: hidden
   overflow-y: hidden
-  justify-content: center
+  justify-content: space-between
   transition: all .3s ease
 
 

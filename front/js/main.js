@@ -3,13 +3,13 @@ let prizesLeftArrow = document.querySelector('.controls-left'),
     prizesRightArrow = document.querySelector('.controls-right');
 
 // left and right image slider
-//const sliderInfo = document.querySelector('.task__info');
+const sliderInfo = document.querySelector('.task__info');
 
 
 //counter slide on medea 890
 const allSlides = document.querySelector('.all-slide')
-// const counterSlide = document.querySelector('.active-slide')
-// let count = 1;
+const counterSlide = document.querySelector('.active-slide')
+let count = 1;
 
 
 var slider1 = slider(
@@ -18,7 +18,7 @@ var slider1 = slider(
     prizesLeftArrow, prizesRightArrow, false);
 
 function slider(id, itemSelector, leftArrow, rightArrow, autoplay, config) {
-    const AUTOPLAY_INTERVAL = 5000;
+    const AUTOPLAY_INTERVAL = 50000;
 
 
     var el = document.getElementById(id);
@@ -29,12 +29,12 @@ function slider(id, itemSelector, leftArrow, rightArrow, autoplay, config) {
     var items = el.querySelectorAll(itemSelector);
     var timerId;
 
-    // function allSlide(){
-    //     let lengthSlide = items.length ;
-    //     allSlides.innerHTML = lengthSlide;
-    //
-    // }
-    // allSlide()
+    function allSlide(){
+        let lengthSlide = items.length ;
+        allSlides.innerHTML = lengthSlide;
+
+    }
+    allSlide()
 
     function getMediaStep() {
         var width = window.innerWidth;
@@ -96,65 +96,65 @@ function slider(id, itemSelector, leftArrow, rightArrow, autoplay, config) {
 
                     if (x - startX > 30 ) {
                         toggleIndex(activeIndIndex - 1)
-                        //count--
-                        //counterSlide.innerHTML = count;
-                        //sliderInfo.classList.remove('rightImageHidden')
+                        count--
+                        counterSlide.innerHTML = count;
+                        sliderInfo.classList.remove('rightImageHidden')
 
                     } else if (startX - x > 30) {
                         toggleIndex(activeIndIndex + 1)
-                        //count++
-                        //counterSlide.innerHTML = count;
-                        //sliderInfo.classList.remove('leftImageHidden')
+                        count++
+                        counterSlide.innerHTML = count;
+                        sliderInfo.classList.remove('leftImageHidden')
                     }
 
                     inner = inner || el.querySelector('.slider-inner')
                     inner.style.transform = ''
                 }
                 touched = false
-                // if(activeIndIndex === 0 ){
-                //     count = 1
-                //     counterSlide.innerHTML = count;
-                //     //sliderInfo.classList.add('leftImageHidden')
-                // }
-                // if(activeIndIndex === items.length - 1 ){
-                //     count = 5
-                //     counterSlide.innerHTML = count;
-                //     //sliderInfo.classList.add('rightImageHidden')
-                // }
+                if(activeIndIndex === 0 ){
+                    count = 1
+                    counterSlide.innerHTML = count;
+                    sliderInfo.classList.add('leftImageHidden')
+                }
+                if(activeIndIndex === items.length - 1 ){
+                    count = 5
+                    counterSlide.innerHTML = count;
+                    sliderInfo.classList.add('rightImageHidden')
+                }
             }
 
             rightArrow.addEventListener('click', () => {
                 toggleIndex(activeIndIndex + 1)
-                // obj.next()
-                // count++
-                // counterSlide.innerHTML = count;
-                // if(activeIndIndex >= 0){
-                //     sliderInfo.classList.remove('leftImageHidden')
-                // } else {
-                //     sliderInfo.classList.add('leftImageHidden')
-                // }
-                //
-                // if(activeIndIndex === items.length - 1){
-                //     sliderInfo.classList.add('rightImageHidden')
-                // } else {
-                //     sliderInfo.classList.remove('rightImageHidden')
-                // }
+                obj.next()
+                count++
+                counterSlide.innerHTML = count;
+                if(activeIndIndex >= 0){
+                    sliderInfo.classList.remove('leftImageHidden')
+                } else {
+                    sliderInfo.classList.add('leftImageHidden')
+                }
+
+                if(activeIndIndex === items.length - 1){
+                    sliderInfo.classList.add('rightImageHidden')
+                } else {
+                    sliderInfo.classList.remove('rightImageHidden')
+                }
 
             })
 
             leftArrow.addEventListener('click', () => {
                 toggleIndex(activeIndIndex - 1)
-                // obj.prev()
-                // count--
-                // counterSlide.innerHTML = count;
-                // if(activeIndIndex === items.length - 1){
-                //     sliderInfo.classList.add('rightImageHidden')
-                // } else {
-                //     sliderInfo.classList.remove('rightImageHidden')
-                // }
-                // if(activeIndIndex <= 0){
-                //     sliderInfo.classList.add('leftImageHidden')
-                // }
+                obj.prev()
+                count--
+                counterSlide.innerHTML = count;
+                if(activeIndIndex === items.length - 1){
+                    sliderInfo.classList.add('rightImageHidden')
+                } else {
+                    sliderInfo.classList.remove('rightImageHidden')
+                }
+                if(activeIndIndex <= 0){
+                    sliderInfo.classList.add('leftImageHidden')
+                }
 
             })
 
