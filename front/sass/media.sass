@@ -15,20 +15,82 @@
     &__mouse
       bottom: 100px
 
+@media screen and (max-width: 1366px)
+  body
+    background: $blue-back
+  .wrapper-main
+    background: none
+  .participation
+    position: relative
+    z-index: 6
+    &::before
+      content: ''
+      position: absolute
+      width: 1013.08px
+      height: 552px
+      right: -249px
+      bottom: -334px
+      background: rgba(42, 67, 137, 0.8)
+      filter: blur(250px)
+      transform: rotate(-30deg)
+      z-index: -1
+  .faq
+    position: relative
+    z-index: 6
+    &::after
+      content: ''
+      position: absolute
+      width: 1337.18px
+      height: 1090.23px
+      right: -854px
+      bottom: -450px
+      background: rgba(255, 38, 126, 0.1)
+      filter: blur(250px)
+      transform: rotate(122.89deg)
+  .task
+    position: relative
+    z-index: 6
+    &::after
+      content: ''
+      position: absolute
+      width: 953.4px
+      height: 519.48px
+      left: -652px
+      bottom: -249px
+      background: rgba(101, 136, 233, 0.8)
+      filter: blur(511.337px)
+      transform: rotate(14.19deg)
+  .prize
+    position: relative
+    z-index: 6
+    &::after
+      content: ''
+      position: absolute
+      width: 953.4px
+      height: 519.48px
+      right: -1176px
+      bottom: 236px
+      background: rgba(101, 136, 233, 0.8)
+      filter: blur(511.337px)
+      transform: rotate(14.19deg)
+  .tournament
+    position: relative
+    z-index: 6
+
+
+
+
 @media screen and (max-width: 1280px)
   .home
     &__title
       top: 105px
-
       &-top,
       &-bottom
         font-size: 49px
         line-height: 41px
         padding: 16px 14px 14px
-
       &-bottom
         margin-top: -7px
-
     &__mouse
       bottom: 70px
 
@@ -344,9 +406,12 @@
 
 
 
+
+
 @media screen and (max-width: 600px)
   body
-    background: linear-gradient(180deg, #0C1630 2.82%, #111A46 19.3%, #0F1835 41.77%, #111B40 61.74%, #0E1831 92.7%)
+    background: #0F1933
+    //background: linear-gradient(180deg, #0C1630 2.82%, #111A46 19.3%, #0F1835 41.77%, #111B40 61.74%, #0E1831 92.7%)
   .wrapper-main
     background: none
 
@@ -377,6 +442,19 @@
       &-bottom
         margin-top: -1px
   .participation
+    position: relative
+    z-index: 3
+    &::before
+      content: ''
+      position: absolute
+      width: 639.97px
+      height: 422.38px
+      bottom: 0
+      right: 10px
+      z-index: -1
+      background: #2A4389
+      filter: blur(250px)
+      transform: rotate(14.19deg)
     &__button
       font-size: 16px
       line-height: 21px
@@ -427,7 +505,7 @@
     &__container
       padding: 0 15px
       position: relative
-      z-index: 2
+      z-index: 5
     &__row
       gap: 45px 15px
       grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px)
@@ -450,6 +528,19 @@
       line-height: 44px
       margin: 0 0 55px 0
   .task
+    position: relative
+    z-index: 6
+    &::after
+      content: ''
+      position: absolute
+      width: 639.97px
+      height: 422.38px
+      bottom: 0
+      left: 50px
+      background: #2A4389
+      filter: blur(250px)
+      z-index: -1
+
     .task-counter
       font-size: 28px
       line-height: 71px
@@ -465,6 +556,18 @@
       margin: 0 0 20px 0
   .prize
     padding: 0 0 45px 0
+    position: relative
+    z-index: 6
+    &::after
+      content: ''
+      position: absolute
+      width: 639.97px
+      height: 422.38px
+      bottom: 0
+      left: 50px
+      background: #2A4389
+      filter: blur(250px)
+      z-index: -1
     &__container
       padding: 0 15px
     &__list
@@ -489,6 +592,18 @@
       min-width: 400px
   .tournament
     padding: 0 0 70px 0
+    position: relative
+    z-index: 6
+    &::after
+      content: ''
+      position: absolute
+      width: 639.97px
+      height: 422.38px
+      bottom: 0
+      left: -560px
+      background: rgba(255, 38, 126, 0.4)
+      filter: blur(250px)
+      z-index: -1
     &__container
       &::before,
       &::after
@@ -557,6 +672,8 @@
         width: 29%
 
   .rules
+    position: relative
+    z-index: 6
     &__container
       padding: 0 15px
     &__details-text
@@ -584,3 +701,10 @@
       transform: scale(0.5)
       margin: 0 0 -425px 0
 
+
+@media screen and (max-width: 950px) and (max-height: 450px) and (orientation: landscape)
+  body
+    //background: linear-gradient(180deg, #0C1630 2.82%, #111A46 19.3%, #0F1835 41.77%, #111B40 61.74%, #0E1831 92.7%)
+    background: #0F1933
+  .wrapper-main
+    background: none
