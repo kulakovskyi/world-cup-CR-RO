@@ -413,8 +413,21 @@
       width: 130%
   .faq
     padding: 0 0 45px 0
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      width: 332.72px
+      height: 271.27px
+      right: 230px
+      top: 203px
+      background: rgba(255, 38, 126, 0.4)
+      filter: blur(200px)
+      transform: rotate(122.89deg)
     &__container
       padding: 0 15px
+      position: relative
+      z-index: 2
     &__row
       gap: 45px 15px
       grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px)
