@@ -30,9 +30,7 @@ function slider(id, itemSelector, leftArrow, rightArrow, autoplay, config) {
     var timerId;
 
     function allSlide(){
-        let lengthSlide = items.length ;
-        allSlides.innerHTML = lengthSlide;
-
+        allSlides.innerHTML = items.length;
     }
     allSlide()
 
@@ -117,7 +115,7 @@ function slider(id, itemSelector, leftArrow, rightArrow, autoplay, config) {
                     sliderInfo.classList.add('leftImageHidden')
                 }
                 if(activeIndIndex === items.length - 1 ){
-                    count = 5
+                    count = items.length;
                     counterSlide.innerHTML = count;
                     sliderInfo.classList.add('rightImageHidden')
                 }
