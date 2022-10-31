@@ -6,7 +6,7 @@ let prizesLeftArrow = document.querySelector('.controls-left'),
 const sliderInfo = document.querySelector('.task__info');
 
 
-//counter slide on medea 890
+//counter slide on media 890
 const allSlides = document.querySelector('.all-slide')
 const counterSlide = document.querySelector('.active-slide')
 let count = 1;
@@ -299,12 +299,10 @@ function slider(id, itemSelector, leftArrow, rightArrow, autoplay, config) {
 
         if (index === 0) {
             leftArrow.classList.add('arrow-disabled');
-
         }
 
         if (index === indicators.length - 1) {
             rightArrow.classList.add('arrow-disabled');
-
         }
 
         indActive && indActive.classList.remove('active')
